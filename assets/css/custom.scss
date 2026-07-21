@@ -1,0 +1,473 @@
+---
+# Custom CSS for Lada Kovler Portfolio - Dark Theme
+---
+
+@charset "utf-8";
+
+// Dark theme colors
+$background-color: #000000;
+$text-color: #ffffff;
+$primary-color: #e74c3c;
+$accent-color: #3498db;
+$light-gray: #222222;
+$medium-gray: #444444;
+
+// Font stacks
+$font-serif: 'Playfair Display', Georgia, serif;
+$font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// Import Minimal Mistakes theme
+@import "minimal-mistakes/skins/dark";
+@import "minimal-mistakes";
+
+// Override theme defaults for dark background with white text
+body {
+  background-color: $background-color !important;
+  color: $text-color !important;
+}
+
+.site-title {
+  font-family: $font-serif;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: $text-color;
+  
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.site-subtitle {
+  color: $accent-color;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $text-color;
+  font-family: $font-serif;
+  font-weight: 700;
+}
+
+// Links
+a {
+  color: $accent-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+  
+  &:visited {
+    color: lighten($accent-color, 10%);
+  }
+}
+
+// Buttons
+.btn {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  color: $text-color !important;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: lighten($primary-color, 10%) !important;
+    border-color: lighten($primary-color, 10%) !important;
+  }
+}
+
+.btn--primary {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  color: $text-color !important;
+}
+
+// Navigation
+.masthead {
+  background-color: $background-color !important;
+  border-bottom: 1px solid $light-gray;
+}
+
+.greedy-nav {
+  background-color: $background-color !important;
+  
+  a {
+    color: $text-color;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  
+  .visible-links a[aria-current="page"] {
+    color: $primary-color;
+  }
+}
+
+// Page container
+.page-container {
+  background-color: $background-color;
+}
+
+// Sidebar
+.sidebar {
+  background-color: $light-gray;
+  border: 1px solid $medium-gray;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 0 0 2rem 0;
+  
+  h3 {
+    color: $text-color;
+  }
+}
+
+// Featured image overlay
+.page__hero--overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  
+  .page__title {
+    color: $text-color;
+    font-family: $font-serif;
+  }
+  
+  .page__meta {
+    color: lighten($text-color, 30%);
+  }
+}
+
+// Forms
+form {
+  max-width: 600px;
+  margin: 2rem 0;
+  
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: $text-color;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    background-color: $light-gray;
+    border: 1px solid $medium-gray;
+    border-radius: 4px;
+    color: $text-color;
+    font-family: $font-sans;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    
+    &::placeholder {
+      color: lighten($medium-gray, 20%);
+    }
+    
+    &:focus {
+      outline: none;
+      border-color: $accent-color;
+      box-shadow: 0 0 0 3px rgba($accent-color, 0.2);
+      background-color: lighten($background-color, 5%);
+    }
+  }
+  
+  button {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: lighten($primary-color, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($primary-color, 0.4);
+    }
+  }
+}
+
+// Form notice
+.form-notice {
+  font-size: 0.85rem;
+  color: lighten($text-color, 30%);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid $medium-gray;
+}
+
+// Responsive video container
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; // 16:9 aspect ratio
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+  }
+}
+
+// Spotify embed styling
+.spotify-embed {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: $light-gray;
+  border-radius: 8px;
+  border-left: 4px solid $accent-color;
+}
+
+// Gallery grid
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    box-shadow: 0 8px 20px rgba($primary-color, 0.3);
+    transform: translateY(-5px);
+    
+    img {
+      transform: scale(1.05);
+    }
+  }
+  
+  figcaption {
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: $text-color;
+    font-size: 0.9rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+// Lessons grid
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  
+  h3 {
+    color: $text-color;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+// Map container
+.map-container {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  
+  iframe {
+    border: none;
+  }
+}
+
+// Tables
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background-color: $light-gray;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  
+  thead {
+    background-color: $medium-gray;
+    
+    th {
+      color: $text-color;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 700;
+      border-bottom: 2px solid $accent-color;
+    }
+  }
+  
+  tbody {
+    tr {
+      border-bottom: 1px solid $medium-gray;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: lighten($light-gray, 5%);
+      }
+      
+      td {
+        padding: 1rem;
+        color: $text-color;
+      }
+    }
+  }
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid $primary-color;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: lighten($text-color, 20%);
+  font-style: italic;
+}
+
+// Code blocks
+code {
+  background-color: $light-gray;
+  color: $accent-color;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+pre {
+  background-color: $light-gray !important;
+  border: 1px solid $medium-gray;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  
+  code {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+// Footer
+.page__footer {
+  background-color: lighten($background-color, 5%);
+  border-top: 1px solid $medium-gray;
+  color: lighten($text-color, 30%);
+  
+  a {
+    color: $accent-color;
+  }
+}
+
+// News items
+.news-item {
+  margin: 2rem 0;
+  padding: 2rem 0;
+  border-bottom: 1px solid $medium-gray;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-date {
+    color: lighten($text-color, 40%);
+    font-size: 0.9rem;
+  }
+  
+  p {
+    color: lighten($text-color, 10%);
+    line-height: 1.6;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .lessons-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    margin-bottom: 2rem;
+  }
+}
+
+// Accessibility
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Print styles
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  a {
+    color: black;
+  }
+  
+  .masthead,
+  .page__footer,
+  .sidebar {
+    display: none;
+  }
+}

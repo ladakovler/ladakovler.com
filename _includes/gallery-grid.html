@@ -1,0 +1,17 @@
+<!-- Gallery Grid Include -->
+<!-- Usage: {% include gallery-grid.html %} -->
+
+<div class="gallery-grid">
+  {% for image in include.images %}
+    <figure class="gallery-item">
+      <img
+        src="{{ image.path }}"
+        alt="{{ image.alt | default: 'Gallery image' }}"
+        loading="lazy"
+      >
+      {% if image.caption %}
+        <figcaption>{{ image.caption }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endfor %}
+</div>

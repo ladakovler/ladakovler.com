@@ -1,0 +1,34 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+*.gem
+.bundle
+Gemfile.lock
+
+# Ruby
+*.rb~
+.rbenv-version
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+node_modules/
+npm-debug.log

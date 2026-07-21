@@ -1,0 +1,50 @@
+<!-- Contact Form Include - Formspree -->
+
+<form action="https://formspree.io/f/mzdnvaan" method="POST" class="contact-form">
+  <fieldset>
+    <label for="name">Name *</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Your Name"
+      required
+      aria-required="true"
+    />
+
+    <label for="email">Email *</label>
+    <input
+      type="email"
+      name="_replyto"
+      id="email"
+      placeholder="your@email.com"
+      required
+      aria-required="true"
+    />
+
+    <label for="subject">Subject</label>
+    <input
+      type="text"
+      name="subject"
+      id="subject"
+      placeholder="Subject (optional)"
+    />
+
+    <label for="message">Message *</label>
+    <textarea
+      name="message"
+      id="message"
+      placeholder="Your message..."
+      rows="8"
+      required
+      aria-required="true"
+    ></textarea>
+
+    <button type="submit" class="btn btn--primary">Send Message</button>
+  </fieldset>
+</form>
+
+<p class="form-notice">
+  By submitting this form, you agree to receive a response at the email address provided.
+  I respect your privacy and will not share your information.
+</p>

@@ -1,0 +1,17 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Bio"
+    url: /bio/
+  - title: "Music"
+    url: /music/
+  - title: "Videos"
+    url: /videos/
+  - title: "Lessons"
+    url: /lessons/
+  - title: "Gallery"
+    url: /gallery/
+  - title: "Contact"
+    url: /contact/
+  - title: "News"
+    url: /news/

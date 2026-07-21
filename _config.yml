@@ -1,0 +1,115 @@
+# Site Configuration for Lada Kovler Music Portfolio
+title: Lada Kovler
+subtitle: Musician & Educator
+description: Personal portfolio of Lada Kovler - musician, vocalist, and music educator
+url: https://ladakovler.com
+baseurl: ""
+repository: ladakovler/ladakovler.com
+
+# Theme
+remote_theme: mmistakes/minimal-mistakes@4.26.2
+minimal_mistakes_skin: "dark"
+
+# Locale and timezone
+locale: "en-US"
+timezone: America/New_York
+
+# Author
+author:
+  name: Lada Kovler
+  avatar: /assets/images/avatar.jpg
+  bio: "Musician & Educator"
+  email: kovler20@gmail.com
+  phone: 646-884-0064
+  location: "Miami Beach, FL"
+  links:
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/lada_kovler"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/ladakovler"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-f"
+      url: "https://www.facebook.com/lada.kovler/"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@lada_kovler"
+
+# Brand colors for dark theme
+primary_bg: "#000000"
+primary_text: "#FFFFFF"
+primary_color: "#e74c3c"
+accent_color: "#3498db"
+
+# Fonts
+google_fonts:
+  - name: "Playfair Display"
+    weights: "400,700"
+  - name: "Open Sans"
+    weights: "300,400,600"
+
+# Markdown processing
+markdown: kramdown
+highlighter: rouge
+lsi: false
+include: [".htaccess"]
+exclude:
+  - ".sass-cache"
+  - ".jekyll-cache"
+  - "gemfile"
+  - "Gemfile.lock"
+  - "node_modules"
+  - "vendor/bundle/"
+  - "vendor/cache/"
+  - "vendor/gems/"
+  - "vendor/ruby/"
+
+# Permalink structure
+permalink: /:categories/:title/
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Pagination
+paginate: 10
+paginate_path: /news/page:num/
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
+# Front matter defaults
+defaults:
+  # Posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: true
+  # Pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+
+# Feed
+feed:
+  path: /feed.xml
+
+# Search
+search: true
+search_full_content: true

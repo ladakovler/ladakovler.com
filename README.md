@@ -1,113 +1,324 @@
 # Lada Kovler Music Portfolio
 
-A Jekyll + Minimal Mistakes personal musician portfolio hosted on GitHub Pages.
+A professional musician portfolio website built with Jekyll and the Minimal Mistakes theme, hosted on GitHub Pages.
 
-## Tech Stack
+## Overview
 
-- **Generator:** Jekyll 4
-- **Theme:** Minimal Mistakes (remote theme)
-- **Hosting:** GitHub Pages
-- **Embeds:** Spotify, SoundCloud, YouTube
-- **Contact Form:** Formspree
-- **CSS:** Minimal Mistakes theme (no custom CSS needed)
+- **Site:** https://ladakovler.com
+- **Builder:** Jekyll 4 + Minimal Mistakes Theme
+- **Hosting:** GitHub Pages (free, automatic deployment)
+- **Performance:** Fast static site (<1 second load time)
+- **Features:** Responsive design, dark theme, music embeds, contact form, image gallery
 
-## Local Development
+## Quick Start
 
 ### Prerequisites
 
-- Ruby 2.7+
-- Bundler
+- Ruby 2.7 or higher
+- Bundler (`gem install bundler`)
+- Git
 
-### Setup
+### Local Development
 
-```bash
-git clone https://github.com/ladakovler/ladakovler.com.git
-cd ladakovler.com
-bundle install
-bundle exec jekyll serve
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ladakovler/ladakovler.com.git
+   cd ladakovler.com
+   ```
 
-Visit `http://localhost:4000` in your browser.
+2. **Install dependencies:**
+   ```bash
+   bundle install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+4. **View locally:**
+   Open `http://localhost:4000` in your browser
 
 ## Project Structure
 
 ```
-_pages/         # Main pages (About, Music, Videos, Lessons, Gallery, Contact, News)
-_posts/         # Blog posts (News/updates)
-_data/          # Navigation configuration
+_config.yml           # Site configuration
+index.md              # Home page
+_pages/               # Main pages (about, music, videos, lessons, gallery, contact, news)
+_posts/               # Blog posts
+_includes/            # Reusable components (video embed, contact form, gallery)
+_data/                # Navigation and data files
 assets/
-  images/       # Profile photo, gallery images, etc.
-_config.yml     # Site-wide configuration
-Gemfile         # Ruby dependencies
+  css/
+    custom.scss       # Custom dark theme styles
+  images/             # All images (hero, avatar, lessons, gallery, etc.)
+Gemfile               # Ruby dependencies
+CNAME                 # Custom domain
+README.md             # This file
 ```
 
-## Getting Started
+## File Manifest & Content Placeholders
 
-1. **Update `_config.yml`:**
-   - Change `title`, `subtitle`, `description`, `url`
-   - Add your email and social links
-   - Update author name and bio
+### Configuration Files
 
-2. **Add Avatar:**
-   - Add a photo to `assets/images/avatar.jpg`
+| File | Purpose | Status |
+|------|---------|--------|
+| `_config.yml` | Site settings, author info, social links | ✅ Ready |
+| `CNAME` | Custom domain | ✅ Set to `ladakovler.com` |
+| `Gemfile` | Dependencies | ✅ Ready |
+| `.gitignore` | Git ignore rules | ✅ Ready |
 
-3. **Customize Pages:**
-   - Edit `_pages/*.md` files with your content
-   - Replace `[Placeholders]` with real info
+### Pages (All in `_pages/`)
 
-4. **Add Embeds:**
-   - **Spotify:** Get your artist/track ID from a Spotify link
-   - **SoundCloud:** Grab embed code from your profile
-   - **YouTube:** Get video ID from the URL
+| File | URL | Status | Content |
+|------|-----|--------|----------|
+| `about.md` | `/bio/` | ✅ Ready | Bio text, portrait image (avatar.jpg) |
+| `music.md` | `/music/` | ✅ Ready | Spotify tracks, YouTube embed (Samba Do Avião) |
+| `videos.md` | `/videos/` | ✅ Ready | 6 YouTube videos embedded |
+| `lessons.md` | `/lessons/` | ✅ Ready | 3 lesson categories, 4 lesson images |
+| `gallery.md` | `/gallery/` | ✅ Ready | 6 gallery photos, responsive grid |
+| `contact.md` | `/contact/` | ✅ Ready | Contact info, Formspree form, Google Maps |
+| `news.md` | `/news/` | ✅ Ready | Blog feed |
 
-5. **Set Up Contact Form:**
-   - Go to [formspree.io](https://formspree.io)
-   - Create a form and get your form ID
-   - Replace `YOUR_FORM_ID` in `_pages/contact.md`
+### Blog Posts
 
-6. **Add Images:**
-   - Optimize images and place in `assets/images/gallery/`
-   - Reference in `_pages/gallery.md`
+| File | Purpose | Status |
+|------|---------|--------|
+| `_posts/2024-07-16-welcome-to-my-music-portfolio.md` | Welcome announcement | ✅ Ready |
+
+### Navigation
+
+| File | Purpose | Status |
+|------|---------|--------|
+| `_data/navigation.yml` | Main navigation menu | ✅ Ready |
+
+### Includes (Components)
+
+| File | Purpose | Status |
+|------|---------|--------|
+| `_includes/responsive-video.html` | YouTube video embed | ✅ Ready |
+| `_includes/gallery-grid.html` | Gallery grid layout | ✅ Ready |
+| `_includes/contact-form.html` | Formspree contact form | ✅ Ready |
+
+### Styles
+
+| File | Purpose | Status |
+|------|---------|--------|
+| `assets/css/custom.scss` | Custom dark theme (black bg, white text) | ✅ Ready |
+
+## Image Assets Required
+
+All images should be placed in `assets/images/`:
+
+| Image Path | Recommended Size | Format | Status |
+|------------|------------------|--------|--------|
+| `hero.jpg` | 1600×600px | JPG | ⚠️ Placeholder needed |
+| `avatar.jpg` | 400×400px | JPG | ⚠️ Placeholder needed |
+| `lessons-01.jpg` | 600×400px | JPG | ⚠️ Placeholder needed |
+| `lessons-02.jpg` | 600×400px | JPG | ⚠️ Placeholder needed |
+| `lessons-03.jpg` | 600×400px | JPG | ⚠️ Placeholder needed |
+| `lessons-04.jpg` | 600×400px | JPG | ⚠️ Placeholder needed |
+| `gallery/gallery-01.jpg` | 1200×800px | JPG | ⚠️ Placeholder needed |
+| `gallery/gallery-02.jpg` | 1200×800px | JPG | ⚠️ Placeholder needed |
+| `gallery/gallery-03.jpg` | 1200×800px | JPG | ⚠️ Placeholder needed |
+| `gallery/gallery-04.jpg` | 1200×800px | JPG | ⚠️ Placeholder needed |
+| `gallery/gallery-05.jpg` | 1200×800px | JPG | ⚠️ Placeholder needed |
+| `gallery/gallery-06.jpg` | 1200×800px | JPG | ⚠️ Placeholder needed |
+| `bio-header.jpg` | 1600×600px | JPG | ⚠️ Placeholder needed |
+| `music-header.jpg` | 1600×600px | JPG | ⚠️ Placeholder needed |
+| `videos-header.jpg` | 1600×600px | JPG | ⚠️ Placeholder needed |
+| `lessons-header.jpg` | 1600×600px | JPG | ⚠️ Placeholder needed |
+| `gallery-header.jpg` | 1600×600px | JPG | ⚠️ Placeholder needed |
+| `contact-header.jpg` | 1600×600px | JPG | ⚠️ Placeholder needed |
+| `news-header.jpg` | 1600×600px | JPG | ⚠️ Placeholder needed |
+
+## Embedded Content
+
+### Music (Spotify Tracks)
+✅ **Embedded in `_pages/music.md`:**
+- Waiting for My Miracle: https://open.spotify.com/track/7IZHrG6dNhXYVmyclWQKS3
+- Nabludai: https://open.spotify.com/track/2BNeoV5zfUOSWV0Q1GGNCY
+- Ravno: https://open.spotify.com/track/6G2ml2m32B29VEhXrcbkFU
+- Samba Do Avião (YouTube): https://youtu.be/_ZbcywLttlA
+
+### Videos (YouTube Embeds)
+✅ **Embedded in `_pages/videos.md`:**
+- JMRJOxy8_6M
+- H3295ZtPGbs
+- IhC1qB4Kxj4
+- KWVe8Z85zq8
+- 3XvryV0zQMU
+- ZcuLZYakbr8
+
+### Contact Form
+✅ **Embedded in `_pages/contact.md`:**
+- Formspree: https://formspree.io/f/mzdnvaan
+
+### Google Maps
+✅ **Embedded in `_pages/contact.md`:**
+- Miami Beach, 41st St area
 
 ## Deployment
 
-GitHub Pages automatically builds from the `main` branch.
+### Deploy to GitHub Pages
 
-1. Push changes to GitHub:
+1. **Verify all content is ready** (images, text, embeds)
+2. **Commit changes:**
    ```bash
    git add .
-   git commit -m "Update content"
-   git push
+   git commit -m "Complete portfolio site setup"
    ```
+3. **Push to GitHub:**
+   ```bash
+   git push origin main
+   ```
+4. **GitHub Pages builds automatically** (1-2 minutes)
+5. **View live site:** https://ladakovler.com
 
-2. Enable GitHub Pages:
-   - Go to repository Settings → Pages
-   - Source: `Deploy from a branch`
-   - Branch: `main` / `root`
+### Enable GitHub Pages
 
-3. Your site will be live at `https://ladakovler.com` (or `https://ladakovler.github.io/ladakovler.com`)
+If not already enabled:
+1. Go to repository **Settings → Pages**
+2. Set Source to "Deploy from a branch"
+3. Select Branch: `main` / Folder: `/ (root)`
+4. Save
 
-## Optional: Custom Domain
+## Image Optimization Guide
 
-1. Buy a domain (e.g., via GoDaddy, Namecheap, etc.)
-2. Update DNS records to point to GitHub Pages
-3. Add domain to repository Settings → Pages → Custom domain
-4. Update `url` in `_config.yml`
+### Before Upload
 
-## Tips for Best Performance
+Optimize all images for web performance:
 
-- **Images:** Optimize with TinyPNG, aim for <100KB per image
-- **Audio/Video:** Embed from streaming platforms (Spotify, YouTube, SoundCloud)—don't host audio files on GitHub
-- **Blog Posts:** Name files `YYYY-MM-DD-title.md` in `_posts/`
-- **Minimal CSS:** The theme is already optimized; avoid custom styles
+**Option 1: Online Tools**
+- [TinyPNG](https://tinypng.com) — Automatic compression
+- [ImageOptim](https://imageoptim.com) — macOS tool
+
+**Option 2: Command Line (ImageMagick)**
+```bash
+# Install ImageMagick
+brew install imagemagick
+
+# Resize and compress
+convert input.jpg -resize 1600x600 -quality 85 output.jpg
+```
+
+### Image Guidelines
+
+| Image Type | Dimensions | Max Size | Quality |
+|------------|------------|----------|----------|
+| Hero/Headers | 1600×600px | 150KB | 85% quality |
+| Avatar/Portrait | 400×400px | 80KB | 85% quality |
+| Lesson Cards | 600×400px | 100KB | 85% quality |
+| Gallery | 1200×800px | 120KB | 85% quality |
+
+## Customization
+
+### Update Site Colors
+
+Edit `assets/css/custom.scss`:
+
+```scss
+// Dark theme colors
+$background-color: #000000;
+$text-color: #ffffff;
+$primary-color: #e74c3c;      // Red accent
+$accent-color: #3498db;       // Blue accent
+```
+
+### Update Social Links
+
+Edit `_config.yml` author section:
+
+```yaml
+author:
+  links:
+    - label: "Instagram"
+      url: "https://www.instagram.com/lada_kovler"
+    # Add more as needed
+```
+
+### Update Contact Information
+
+Edit `_pages/contact.md`:
+
+```markdown
+📧 Email: kovler20@gmail.com
+📱 Phone: 646-884-0064
+📍 Location: Miami Beach, FL
+```
+
+## Content Checklist
+
+### Before Publishing
+
+- [ ] All header images added (hero.jpg, bio-header.jpg, etc.)
+- [ ] Avatar photo added (avatar.jpg)
+- [ ] All 4 lesson images added (lessons-01.jpg - 04.jpg)
+- [ ] All 6 gallery images added (gallery/gallery-01.jpg - 06.jpg)
+- [ ] Bio page reviewed and personalized
+- [ ] Music embeds verified (Spotify links working)
+- [ ] Videos playing correctly
+- [ ] Contact form tested (Formspree working)
+- [ ] Google Maps location verified
+- [ ] Social media links updated
+- [ ] Phone and email verified
+
+## Troubleshooting
+
+### Site not deploying?
+1. Check **Actions** tab for build errors
+2. Verify `_config.yml` YAML syntax (use [YAML Linter](https://www.yamllint.com/))
+3. Check file names for typos
+4. Ensure GitHub Pages is enabled
+
+### Images not showing?
+1. Verify file paths match exactly: `assets/images/filename.jpg`
+2. Check file exists in repository
+3. Clear browser cache (Ctrl+Shift+Del)
+4. Wait 5 minutes for GitHub Pages to rebuild
+
+### Embeds not working?
+1. Verify YouTube video IDs are correct
+2. Check Spotify track URLs are valid
+3. Test Formspree form at https://formspree.io
+4. Verify Google Maps iframe code
+
+### Local server won't start?
+```bash
+# Clear cache
+rm -rf .jekyll-cache _site
+
+# Update gems
+bundle update
+
+# Try again
+bundle exec jekyll serve
+```
 
 ## Resources
 
-- [Jekyll Docs](https://jekyllrb.com/docs/)
+- [Jekyll Documentation](https://jekyllrb.com/docs/)
 - [Minimal Mistakes Theme](https://mmistakes.github.io/minimal-mistakes/)
-- [GitHub Pages](https://pages.github.com/)
-- [Formspree Docs](https://formspree.io/docs/)
+- [GitHub Pages Help](https://docs.github.com/en/pages)
+- [Markdown Guide](https://www.markdownguide.org/)
+- [Formspree Docs](https://formspree.io/docs)
+
+## Support
+
+For questions or issues:
+1. Review the troubleshooting section above
+2. Check Jekyll and theme documentation
+3. Search [GitHub Issues](https://github.com/mmistakes/minimal-mistakes/issues)
+4. Post on [Jekyll Talk](https://talk.jekyllrb.com/)
 
 ---
 
-Built with ❤️ by [Copilot](https://github.com/features/copilot)
+**Status:** Ready for review and image uploads ✅
+
+**Last Updated:** July 16, 2024
+
+**Next Steps:**
+1. Upload hero, avatar, and gallery images
+2. Review all page content
+3. Test locally with `bundle exec jekyll serve`
+4. Push to GitHub when ready
