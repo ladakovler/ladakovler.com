@@ -1,4 +1,4 @@
-# Site Configuration for Lada Kovler Music Portfolio
+ # Site Configuration for Lada Kovler Music Portfolio
 title: Lada Kovler
 subtitle: Musician & Educator
 description: Personal portfolio of Lada Kovler - musician, vocalist, and music educator
@@ -7,7 +7,7 @@ baseurl: ""
 repository: ladakovler/ladakovler.com
 
 # Theme
-remote_theme: mmistakes/minimal-mistakes@4.26.2
+theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "dark"
 
 # Locale and timezone
