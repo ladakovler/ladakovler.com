@@ -1,44 +1,16 @@
 ---
 layout: home
-author_profile: true
-title: Lada Kovler - Musician & Educator
+title: "Lada Kovler"
 permalink: /
 header:
-  overlay_image: /assets/images/hero.jpg
-  overlay_filter: rgba(0, 0, 0, 0.6)
-  caption: "Musician & Music Educator"
+  image: /assets/images/hero-1.jpg
 excerpt: >-
-  Welcome to my music portfolio. Explore my performances, recordings, teaching, and creative work.
-featured_posts:
-  - title: "Explore My Bio"
-    excerpt: "Learn about my musical journey and background"
-    url: "/bio/"
-    btn_label: "Read Bio"
-    btn_class: "btn--primary"
-  - title: "Listen to My Music"
-    excerpt: "Discover my original recordings and compositions"
-    url: "/music/"
-    btn_label: "Listen Now"
-    btn_class: "btn--primary"
-  - title: "Book a Lesson"
-    excerpt: "Professional music instruction tailored to your goals"
-    url: "/lessons/"
-    btn_label: "Learn More"
-    btn_class: "btn--primary"
+  Lada Kovler
 ---
 
-## Welcome
+![Hero banner](/assets/images/hero-1.jpg){: .full-width-image}
 
-I'm Lada Kovler, a professional musician and music educator based in Miami Beach, Florida. This is my personal space to share my performances, original music, educational content, and more.
-
-### Quick Links
-
-- **[View My Bio](/bio/)** — Learn about my musical background and experience
-- **[Listen to My Music](/music/)** — Original recordings and compositions
-- **[Watch Videos](/videos/)** — Performances and educational content
-- **[Book Music Lessons](/lessons/)** — Private instruction for all levels
-- **[View Photos](/gallery/)** — Performance and event photography
-- **[Get in Touch](/contact/)** — Contact me for bookings or inquiries
+Singer, Songwriter, Producer, Arranger Vocal and Piano Teacher
 
 ### Get in Touch
 
@@ -46,9 +18,15 @@ I'm Lada Kovler, a professional musician and music educator based in Miami Beach
 📱 **Phone:** [646-884-0064](tel:6468840064)  
 📍 **Location:** Miami Beach, FL
 
-### Follow Me
+---
 
-- [Instagram](https://www.instagram.com/lada_kovler)
-- [YouTube](https://www.youtube.com/@lada_kovler)
-- [LinkedIn](https://www.linkedin.com/in/ladakovler)
-- [Facebook](https://www.facebook.com/lada.kovler/)
+![Hero banner 2](/assets/images/hero-2.jpg){: .full-width-image}
+
+## Follow Me
+
+- [Instagram](https://www.instagram.com/lada_kovler) - Daily updates and behind-the-scenes
+- [YouTube](https://www.youtube.com/@lada_kovler) - Subscribe for new videos
+- [LinkedIn](https://www.linkedin.com/in/ladakovler) - Professional updates
+- [Facebook](https://www.facebook.com/lada.kovler/) - Follow for announcements
+
+---
